@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # 제목
-st.title("E-Factor Waste Reduction Comparison")
+st.title("E-Factor 연도별 폐기물 감소율 비교")
 st.subheader("Compare Waste Reduction Over Time: Organic Solvent vs Supercritical CO₂")
 
 # 📸 이미지 표시 (파일명 정확히 Reality.jpg여야 함)
