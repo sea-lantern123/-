@@ -1,11 +1,12 @@
-# 파일명 예: e_factor_dashboard.py
-
 import streamlit as st
 import matplotlib.pyplot as plt
 
 # 제목
 st.title("E-Factor Waste Reduction Comparison")
 st.subheader("Compare Waste Reduction Over Time: Organic Solvent vs Supercritical CO₂")
+
+# 📸 이미지 표시 (파일명 정확히 Reality.jpg여야 함)
+st.image("Reality.jpg", caption="Real-world impact of waste reduction", use_column_width=True)
 
 # 연도 설정
 years = [2000, 2010, 2020]
@@ -17,8 +18,8 @@ e_organic = []
 e_scCO2 = []
 
 for year in years:
-    e_org = st.sidebar.slider(f"Organic Solvent E-Factor ({year})", min_value=1, max_value=50, value=25 - (years.index(year) * 5))
-    e_sc = st.sidebar.slider(f"Supercritical CO₂ E-Factor ({year})", min_value=0, max_value=50, value=15 - (years.index(year) * 6))
+    e_org = st.sidebar.slider(f"유기용매 E-Factor ({year})", min_value=1, max_value=50, value=25 - (years.index(year) * 5))
+    e_sc = st.sidebar.slider(f"초임계 CO₂ E-Factor ({year})", min_value=0, max_value=50, value=15 - (years.index(year) * 6))
     e_organic.append(e_org)
     e_scCO2.append(e_sc)
 
